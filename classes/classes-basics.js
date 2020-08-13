@@ -3,11 +3,25 @@ class Person {
     this.name = name;
   }
   greet() {
-    console.log('Hello, my name is ' + this.name);
+    console.log('Hello, my name is ' + this.name + ' and I am ' + this.age);
   }
 }
 
-let person = new Person('Cosmin');
-person.greet();
+class Cosmin extends Person {
+  constructor(age) {
+    super('Cosmin');
+    this.age = age;
+  }
 
-console.log(person.__proto__ == Person.prototype);
+  greet() {
+    console.log('Hello!');
+  }
+
+  greetTwice() {
+    super.greet();
+    super.greet();
+  }
+}
+
+let cosmin = new Cosmin(21);
+cosmin.greetTwice();
