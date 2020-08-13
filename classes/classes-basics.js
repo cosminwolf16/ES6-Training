@@ -9,3 +9,5 @@ class Person {
 
 let person = new Person('Cosmin');
 person.greet();
+
+console.log(person.__proto__ == Person.prototype);
