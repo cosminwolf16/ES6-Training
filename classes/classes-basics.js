@@ -1,3 +1,12 @@
+class Helper {
+  static logTwice(message) {
+    console.log(message);
+    console.log(message);
+  }
+}
+
+Helper.logTwice('Logged');
+
 class Person {
   constructor(name) {
     this.name = name;
@@ -12,16 +21,6 @@ class Cosmin extends Person {
     super('Cosmin');
     this.age = age;
   }
-
-  greet() {
-    console.log('Hello!');
-  }
-
-  greetTwice() {
-    super.greet();
-    super.greet();
-  }
 }
 
 let cosmin = new Cosmin(21);
-cosmin.greetTwice();
